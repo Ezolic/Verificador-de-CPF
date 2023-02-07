@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+@font-face {
+    font-family: Fonte;
+    src: url("Dmitry Rastvortsev - KyivType Sans Light.otf");
+}
+
+* {
+    padding: 0;
+
+}
+
+body {
+    background-color: #C5D1EB;
+    overflow: hidden;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: visible;
+}
+
+.verificador {
+    display: grid;
+    grid-template-areas:
+        'titulo titulo'
+        'input botao'
+        'resultado resultado';
+
+
+    font-family: Fonte;
+    max-width: 400px;
+    padding: 40px;
+    background-color: #92AFD7;
+    box-shadow: 11px 11px 4px -2px rgba(0, 0, 0, 0.38);
+    font-weight: bold;
+
+}
+
+.titulo {
+    grid-area: titulo;
+
+}
+
+.CPF {
+    display: flex;
+    grid-area: input;
+
+}
+
+.botao {
+    grid-area: botao;
+}
+
+button {
+    width: 100%;
+    border-radius: 100px;
+    padding: 2px;
+    font-size: 15px;
+    border: none;
+    padding: 10px;
+    background-color: #c2dbe7;
+    cursor: pointer;
+    font-family: Fonte;
+    font-weight: bold;
+
+} button:hover {
+    transition: .3s;
+    background-color: #000;
+    color: #c2dbe7;
+}
+
+h1 {
+    text-align: center;
+}
+
+input {
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-family: Fonte;
+    font-weight: bold;
+    border-bottom: 1px solid #000;
+    background-color: #92AFD7;
+    font-size: 15px;
+
+}
+
+label {
+    position: absolute;
+}
+
+.resultado {
+    grid-area: resultado;
+    height: 2.5rem;
+    position: relative;
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+}
+
+.icon {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 20px;
+    height: 100%;
+    width: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+}
+
+.text {
+    margin-top: 10px;
+    white-space: nowrap;
+    position: relative;
+    z-index: 1;
+    font-size: 11px;
+    height: 100%;
+    width: 0;
+    color: #fff;
+    overflow: hidden;
+    transition: 0.3s all ease;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-left: 20px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.valido {
+    background-color: green;
+    width: 100%;
+    padding-right: 20px;
+}
+
+.invalido {
+    background-color: red;
+    width: 100%;
+    padding-right: 20px;
+}
+
+.validoCor {
+    background-color: green;
+}
+
+.invalidoCor {
+    background-color: red;
+}
+
+.info {
+    color: #000;
+    background-color: yellow;
+    width: 100%;
+    padding-right: 20px;
+}
+
+.infoCor {
+    background-color: yellow;
+}
+
+@media screen and (max-width: 500px) {
+
+    .verificador {
+        display: grid;
+        grid-template-areas:
+            'titulo titulo'
+            'input input'
+            'botao botao'
+            'resultado resultado';
+
+    }
+
+    .botao {
+        margin-top: 5px;
+    }
+}
